@@ -16,3 +16,7 @@
 - mounting: constructor() call -> render() call -> componentDidMount() call
 - updating: ex) state를 통해서 값이 변경되고 다시 render 될때 / render() call -> componentDidUpdate() call
 - unmounting: component goes away ->  componentWillUnmount() call
+
+
+### axios
+- npm install axios

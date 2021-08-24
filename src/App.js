@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import Movie from "./Movie";
 import Loading from "./Loading";
 import FoodList from "./FoodList";
 
@@ -10,18 +12,14 @@ import FoodList from "./FoodList";
 class App extends React.Component{
     state = {
         count: 0,
-        isLoading: true,
-        movies: []
     };
+
     constructor(props) {
         super(props);
         console.log("hello")
     }
     componentDidMount() {
         console.log("component rendered")
-        setTimeout(() => {
-            this.setState({isLoading: false})
-        }, 3000)
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
         console.log("component update")
@@ -47,11 +45,9 @@ class App extends React.Component{
 
     render() {
         console.log("I'm rendering")
-        const {isLoading} = this.state;
         return(
           <div>
-              {/*<Loading/>*/}
-              {isLoading ? "Loading...." : "We are Ready!"}
+              <Loading/>
               {/*<h1>Class component</h1>*/}
               {/*<p>The Number is: {this.state.count}</p>*/}
               {/*<button onClick={this.add}>Add</button>*/}
