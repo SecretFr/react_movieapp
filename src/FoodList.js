@@ -71,14 +71,6 @@ function FoodList(){
     return(
         <div>
             {foodILike.map(renderFood)}
-            {/*map을 사용하여 리스트 데이터를 전달하는 두 가지 방법*/}
-            {/*{foodILike.map(food =>*/}
-            {/*    <Food key={food.id}*/}
-            {/*          name={food.name}*/}
-            {/*          image={food.image} */}
-            {/*          rating={food.rating}/>*/}
-            {/*)}*/}
-            {/*{console.log(foodILike.map(renderFood))}*/}
         </div>
     );
 }
