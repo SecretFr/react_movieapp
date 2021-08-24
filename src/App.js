@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FoodList from "./FoodList";
 
+
+
+
+// 부모가 자식에게 데이터를 보내는 방법(jsx), props를 사용해서 data를 보낸다.
+// {} <--- javascript를 사용할 수 있는 표시
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello!!</h1>
+        <FoodList/>
+
     </div>
   );
 }
