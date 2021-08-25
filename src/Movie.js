@@ -2,11 +2,19 @@ import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-function Movie({id, year, title, summary, poster}){
+function Movie({id, year, title, summary, poster, genres}){
     return(
-        <div>
-            <h1>{title}</h1>
-            <img src={poster}/>
+        <div className="movie">
+            <img src={poster} alt={title} title={title}/>
+            <div className="movie_data">
+                <h3 className="movie_title">{title}</h3>
+                <h5 className="movie_year">{year}</h5>
+                <ul className="movie_genres">
+                    {genres.map((genre, index) =>
+                        <li key={index} className="genres_genre">{genre}</li>)}
+                </ul>
+                <p className="movie_summary">{summary}</p>
+            </div>
         </div>
     )
 }
@@ -16,7 +24,8 @@ Movie.propTypes = {
     year: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired
+    poster: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default Movie;

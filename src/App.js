@@ -3,6 +3,7 @@ import axios from "axios";
 import Movie from "./Movie";
 import Loading from "./Loading";
 import FoodList from "./FoodList";
+import "./css/App.css"
 
 
 // 부모가 자식에게 데이터를 보내는 방법(jsx), props를 사용해서 data를 보낸다.
